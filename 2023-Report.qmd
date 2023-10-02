@@ -35,6 +35,7 @@ title-slide-attributes:
 1. Harmonization of EJ and EctJ Policies and Replication Check Processes.
 2. Proposal to change proceedure of package submissions.
 3. Annual report with preformance statistics.
+
 :::
 
 
