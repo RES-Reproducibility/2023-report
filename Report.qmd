@@ -1,0 +1,214 @@
+---
+title: "EJ Data Editor Report {{< var vintage >}}"
+author: 
+  - name: Florian Oswald
+    orcid: 0000-0001-7737-2038
+    email: florian.oswald@sciencespo.fr
+    affiliations: SciencesPo Paris, RES Data Editor
+date: today
+date-format: "D MMMM, YYYY"
+subtitle: "RES Reproducibility Operations"
+format: 
+  revealjs:
+    theme: _extensions/grantmcdermott/clean/clean.scss
+    chalkboard: false
+    logo: images/RES-logo.png
+    footer: "EJ Data Editor Report {{< var vintage >}} [Florian Oswald](https://floswald.github.io/)"
+    incremental: false
+    code-line-numbers: false
+    highlight-style: github  
+    slide-number: true
+editor: visual
+title-slide-attributes:
+  data-background-image: images/RES-logo1.png
+  data-background-position: 85% 30%
+  data-background-size: 25%
+---
+
+## Agenda
+
+1. Process Optimization: EJ 🤝 EctJ
+2. Challenges: Computing Power (Where to Stop)
+3. Performance Report
+
+
+## 1. Process Optimization
+
+1. Together with Brooke and Jaap Abbring (ME of EctJ) we worked to harmonize data policies of EJ and EctJ.
+2. Same London based team handles both journals now, so streamlining processes is beneficial.
+3. We have almost identical data policies now.
+
+
+
+# Challenges  {background-color="#40666e"}
+
+## Challenges: Computing Power 
+
+### Nuvolos Subscription
+
+::: {.incremental}
+* We paid 2100 Euros for a [nuvolos](https://nuvolos.cloud/) subscription in June 2023 (term until June 2024).
+* 69120 CPU hours (single vCPU) in total. We've spent 48911 so far, i.e. 70%. 👍
+* We need a slightly larger subscription next year, particularly large file storage.
+* The service is excellent value for money.
+:::
+
+::: {.fragment}
+::: {.callout-note}
+# Where To Stop?
+
+Applications, particularly those relying on machine learning methods, require vast computing power. Does it make sense to attempt full reproducibility checks?
+:::
+:::
+
+
+
+## Challenges: Computing Power 
+
+### Nuvolos NCU Usage
+
+![_Nuvolos Compute Unit_ is a single vCPU with 4GM RAM](/images/nuvolos-NCU.png)
+
+
+## Challenges: Computing Power 
+
+### Nuvolos Usage
+
+![Number of app starts on Nuvolos](/images/nuvolos-numapps.png)
+
+
+## Challenges: Computing Power
+
+### Budgeting
+
+::: {.incremental}
+* Running Reproducibility Checks in-house (running them _anywhere_) costs money.
+* Labor costs and costs of computing power 📈.
+* (Costs of Licenses?)
+* I suggest thinking about a slightly larger budget to cover those costs.
+* I *strongly* suggest to renew the nuvolos subscription.
+:::
+
+
+
+
+# EJ Data Editor Report  {background-color="#40666e"}
+
+
+::: footer
+:::
+
+
+## Processing Times
+
+```{r}
+#| message: false
+#| warning: false
+library(RESr)
+x = read_list()
+```
+
+::: {.column width="74%"}
+![](images/proctime_iters.png)
+:::
+
+::: {.column width="25%"}
+<br>
+
+* Stayed below 15 day mark.
+* Right direction 📉.
+* Graph shows cumulative times.
+:::
+
+---
+
+## Revisions Per Paper
+
+::: {.column width="65%"}
+![](images/hazard.png)
+:::
+
+::: {.column width="30%"}
+<br>
+
+* 80% of papers fail in first round.
+* Hazard still 50% in second round.
+* Difficult packages
+:::
+
+<!-- ---
+
+## Processing Times Per Paper
+
+::: {.column width="65%"}
+![](images/proctime_papers.png)
+:::
+
+::: {.column width="30%"}
+<br>
+
+* Replication times per paper falling.
+* Resubmission times increasing.
+* Graph shows cumulative times.
+::: -->
+
+---
+
+## Hours Spent per Iteration
+
+* As before we pay replicators by the hour.
+* on average 1h per iteration, 2 iterations per paper 👉 2h per paper.
+
+::: {.column width=45%}
+
+![](images/hours_iter.png)
+:::
+
+::: {.column width=45%}
+
+![](images/iters_paper.png)
+
+:::
+
+
+---
+
+## Software
+
+::: {style="font-size: 80%;"}
+```{r}
+kableExtra::kable(RESr:::list_software( )$table)
+```
+:::
+
+
+---
+
+## Software
+
+![](images/software.png)
+
+---
+
+## Data Availability 
+
+
+::: {.column width="65%"}
+![](/images/datastatements.png)
+
+:::
+
+
+::: {.column width="30%"}
+* Confidential (👉 for us: *complicated*) Data is on the rise.
+* Temporary Access is a good solution for us.
+* Partial and temp. only are the exception.
+* We changed policy slightly to encourage temp access.
+:::
+
+:::
+
+# End
+
+Thanks for listening and: onwards! 💪🏽
+
