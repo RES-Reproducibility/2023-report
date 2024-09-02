@@ -1,0 +1,86 @@
+[
+  {
+    "objectID": "Report.html#agenda",
+    "href": "Report.html#agenda",
+    "title": "EJ Data Editor Report April 2024",
+    "section": "Agenda",
+    "text": "Agenda\n\nProcess Optimization: EJ 🤝 EctJ\nChallenges: Computing Power (Where to Stop)\nPerformance Report"
+  },
+  {
+    "objectID": "Report.html#process-optimization",
+    "href": "Report.html#process-optimization",
+    "title": "EJ Data Editor Report April 2024",
+    "section": "1. Process Optimization",
+    "text": "1. Process Optimization\n\nTogether with Brooke and Jaap Abbring (ME of EctJ) we worked to harmonize data policies of EJ and EctJ.\nSame London based team handles both journals now, so streamlining processes is beneficial.\nWe have almost identical data policies now."
+  },
+  {
+    "objectID": "Report.html#challenges-computing-power",
+    "href": "Report.html#challenges-computing-power",
+    "title": "EJ Data Editor Report April 2024",
+    "section": "Challenges: Computing Power",
+    "text": "Challenges: Computing Power\nNuvolos Subscription\n\n\nWe paid 2100 Euros for a nuvolos subscription in June 2023 (term until June 2024).\n69120 CPU hours (single vCPU) in total. We’ve spent 48911 so far, i.e. 70%. 👍\nWe need a slightly larger subscription next year, particularly large file storage.\nThe service is excellent value for money.\n\n\n\n\n\n\n\n\n\nWhere To Stop?\n\n\nApplications, particularly those relying on machine learning methods, require vast computing power. Does it make sense to attempt full reproducibility checks?"
+  },
+  {
+    "objectID": "Report.html#challenges-computing-power-1",
+    "href": "Report.html#challenges-computing-power-1",
+    "title": "EJ Data Editor Report April 2024",
+    "section": "Challenges: Computing Power",
+    "text": "Challenges: Computing Power\nNuvolos NCU Usage\n\nNuvolos Compute Unit is a single vCPU with 4GM RAM"
+  },
+  {
+    "objectID": "Report.html#challenges-computing-power-2",
+    "href": "Report.html#challenges-computing-power-2",
+    "title": "EJ Data Editor Report April 2024",
+    "section": "Challenges: Computing Power",
+    "text": "Challenges: Computing Power\nNuvolos Usage\n\nNumber of app starts on Nuvolos"
+  },
+  {
+    "objectID": "Report.html#challenges-computing-power-3",
+    "href": "Report.html#challenges-computing-power-3",
+    "title": "EJ Data Editor Report April 2024",
+    "section": "Challenges: Computing Power",
+    "text": "Challenges: Computing Power\nBudgeting\n\n\nRunning Reproducibility Checks in-house (running them anywhere) costs money.\nLabor costs and costs of computing power 📈.\n(Costs of Licenses?)\nI suggest thinking about a slightly larger budget to cover those costs.\nI strongly suggest to renew the nuvolos subscription."
+  },
+  {
+    "objectID": "Report.html#processing-times",
+    "href": "Report.html#processing-times",
+    "title": "EJ Data Editor Report April 2024",
+    "section": "Processing Times",
+    "text": "Processing Times\n\n\n\n\n\n\nStayed below 15 day mark.\nRight direction 📉.\nGraph shows cumulative times."
+  },
+  {
+    "objectID": "Report.html#revisions-per-paper",
+    "href": "Report.html#revisions-per-paper",
+    "title": "EJ Data Editor Report April 2024",
+    "section": "Revisions Per Paper",
+    "text": "Revisions Per Paper\n\n\n\n\n\n\n80% of papers fail in first round.\nHazard still 50% in second round.\nDifficult packages"
+  },
+  {
+    "objectID": "Report.html#hours-spent-per-iteration",
+    "href": "Report.html#hours-spent-per-iteration",
+    "title": "EJ Data Editor Report April 2024",
+    "section": "Hours Spent per Iteration",
+    "text": "Hours Spent per Iteration\n\nAs before we pay replicators by the hour.\non average 1h per iteration, 2 iterations per paper 👉 2h per paper."
+  },
+  {
+    "objectID": "Report.html#software",
+    "href": "Report.html#software",
+    "title": "EJ Data Editor Report April 2024",
+    "section": "Software",
+    "text": "Software\n\n\n\n\n\n\nSoftware\nProportion\n\n\n\n\nstata\n0.794\n\n\nmatlab\n0.194\n\n\nR\n0.120\n\n\nArcGIS_QGIS\n0.056\n\n\npython\n0.043\n\n\nmathematica\n0.031\n\n\nexcel\n0.029\n\n\nfortran\n0.025\n\n\nSAS\n0.010\n\n\ndynare\n0.008\n\n\njulia\n0.006\n\n\nOther\n0.012"
+  },
+  {
+    "objectID": "Report.html#software-1",
+    "href": "Report.html#software-1",
+    "title": "EJ Data Editor Report April 2024",
+    "section": "Software",
+    "text": "Software"
+  },
+  {
+    "objectID": "Report.html#data-availability",
+    "href": "Report.html#data-availability",
+    "title": "EJ Data Editor Report April 2024",
+    "section": "Data Availability",
+    "text": "Data Availability\n\n\n\n\n\nConfidential (👉 for us: complicated) Data is on the rise.\nTemporary Access is a good solution for us.\nPartial and temp. only are the exception.\nWe changed policy slightly to encourage temp access.\n\n\n:::"
+  }
+]
