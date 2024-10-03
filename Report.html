@@ -8,10 +8,10 @@
 <link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.550">
+  <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="Florian Oswald">
-  <title>Report - EJ Data Editor Report April 2024</title>
+  <title>Report – EJ Data Editor Report October 2024</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -29,6 +29,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #24292e;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #24292e; } /* Normal */
+    code span.al { color: #ff5555; font-weight: bold; } /* Alert */
+    code span.an { color: #6a737d; } /* Annotation */
+    code span.at { color: #d73a49; } /* Attribute */
+    code span.bn { color: #005cc5; } /* BaseN */
+    code span.bu { color: #d73a49; } /* BuiltIn */
+    code span.cf { color: #d73a49; } /* ControlFlow */
+    code span.ch { color: #032f62; } /* Char */
+    code span.cn { color: #005cc5; } /* Constant */
+    code span.co { color: #6a737d; } /* Comment */
+    code span.cv { color: #6a737d; } /* CommentVar */
+    code span.do { color: #6a737d; } /* Documentation */
+    code span.dt { color: #d73a49; } /* DataType */
+    code span.dv { color: #005cc5; } /* DecVal */
+    code span.er { color: #ff5555; text-decoration: underline; } /* Error */
+    code span.ex { color: #d73a49; font-weight: bold; } /* Extension */
+    code span.fl { color: #005cc5; } /* Float */
+    code span.fu { color: #6f42c1; } /* Function */
+    code span.im { color: #032f62; } /* Import */
+    code span.in { color: #6a737d; } /* Information */
+    code span.kw { color: #d73a49; } /* Keyword */
+    code span.op { color: #24292e; } /* Operator */
+    code span.ot { color: #6f42c1; } /* Other */
+    code span.pp { color: #d73a49; } /* Preprocessor */
+    code span.re { color: #6a737d; } /* RegionMarker */
+    code span.sc { color: #005cc5; } /* SpecialChar */
+    code span.ss { color: #032f62; } /* SpecialString */
+    code span.st { color: #032f62; } /* String */
+    code span.va { color: #e36209; } /* Variable */
+    code span.vs { color: #032f62; } /* VerbatimString */
+    code span.wa { color: #ff5555; } /* Warning */
   </style>
   <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -326,7 +391,7 @@
     <div class="slides">
 
 <section id="title-slide" data-background-image="images/RES-logo1.png" data-background-position="85% 30%" data-background-size="25%" class="quarto-title-block center">
-  <h1 class="title">EJ Data Editor Report April 2024</h1>
+  <h1 class="title">EJ Data Editor Report October 2024</h1>
   <p class="subtitle">RES Reproducibility Operations</p>
 
 <div class="quarto-title-authors">
@@ -343,79 +408,21 @@ Florian Oswald <a href="https://orcid.org/0000-0001-7737-2038" class="quarto-tit
     </div>
 </div>
 
-  <p class="date">2 September, 2024</p>
+  <p class="date">3 October, 2024</p>
 </section>
 <section id="agenda" class="slide level2">
 <h2>Agenda</h2>
 <ol type="1">
-<li>Process Optimization: EJ 🤝 EctJ</li>
-<li>Challenges: Computing Power (Where to Stop)</li>
+<li>Report on Downloads of our packages</li>
 <li>Performance Report</li>
+<li>Difficult Packages</li>
 </ol>
 </section>
-<section id="process-optimization" class="slide level2">
-<h2>1. Process Optimization</h2>
-<ol type="1">
-<li>Together with Brooke and Jaap Abbring (ME of EctJ) we worked to harmonize data policies of EJ and EctJ.</li>
-<li>Same London based team handles both journals now, so streamlining processes is beneficial.</li>
-<li>We have almost identical data policies now.</li>
-</ol>
-</section>
-<section>
-<section id="challenges" class="title-slide slide level1 center" data-background-color="#40666e">
-<h1>Challenges</h1>
+<section id="consumption-of-our-packages" class="slide level2">
+<h2>Consumption of our Packages</h2>
+<p>How often are our packages downloaded from <code>zenodo.org</code> vs how many citations on google scholar?</p>
 
-</section>
-<section id="challenges-computing-power" class="slide level2">
-<h2>Challenges: Computing Power</h2>
-<h3 id="nuvolos-subscription">Nuvolos Subscription</h3>
-<div>
-<ul>
-<li class="fragment">We paid 2100 Euros for a <a href="https://nuvolos.cloud/">nuvolos</a> subscription in June 2023 (term until June 2024).</li>
-<li class="fragment">69120 CPU hours (single vCPU) in total. We’ve spent 48911 so far, i.e.&nbsp;70%. 👍</li>
-<li class="fragment">We need a slightly larger subscription next year, particularly large file storage.</li>
-<li class="fragment">The service is excellent value for money.</li>
-</ul>
-</div>
-<div class="fragment">
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Where To Stop?</strong></p>
-</div>
-<div class="callout-content">
-<p>Applications, particularly those relying on machine learning methods, require vast computing power. Does it make sense to attempt full reproducibility checks?</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="challenges-computing-power-1" class="slide level2">
-<h2>Challenges: Computing Power</h2>
-<h3 id="nuvolos-ncu-usage">Nuvolos NCU Usage</h3>
-
-<img data-src="./images/nuvolos-NCU.png" class="r-stretch quarto-figure-center"><p class="caption"><em>Nuvolos Compute Unit</em> is a single vCPU with 4GM RAM</p></section>
-<section id="challenges-computing-power-2" class="slide level2">
-<h2>Challenges: Computing Power</h2>
-<h3 id="nuvolos-usage">Nuvolos Usage</h3>
-
-<img data-src="./images/nuvolos-numapps.png" class="r-stretch quarto-figure-center"><p class="caption">Number of app starts on Nuvolos</p></section>
-<section id="challenges-computing-power-3" class="slide level2">
-<h2>Challenges: Computing Power</h2>
-<h3 id="budgeting">Budgeting</h3>
-<div>
-<ul>
-<li class="fragment">Running Reproducibility Checks in-house (running them <em>anywhere</em>) costs money.</li>
-<li class="fragment">Labor costs and costs of computing power 📈.</li>
-<li class="fragment">(Costs of Licenses?)</li>
-<li class="fragment">I suggest thinking about a slightly larger budget to cover those costs.</li>
-<li class="fragment">I <em>strongly</em> suggest to renew the nuvolos subscription.</li>
-</ul>
-</div>
-</section></section>
+<img data-src="./images/downloads.png" class="r-stretch"></section>
 <section>
 <section id="ej-data-editor-report" class="title-slide slide level1 center" data-background-color="#40666e">
 <h1>EJ Data Editor Report</h1>
@@ -427,30 +434,26 @@ Florian Oswald <a href="https://orcid.org/0000-0001-7737-2038" class="quarto-tit
 <h2>Processing Times</h2>
 <div class="column" style="width:74%;">
 <p><img data-src="images/proctime_iters.png"></p>
-</div>
-<div class="column" style="width:25%;">
+</div><div class="column" style="width:25%;">
 <p><br></p>
 <ul>
 <li>Stayed below 15 day mark.</li>
 <li>Right direction 📉.</li>
 <li>Graph shows cumulative times.</li>
 </ul>
-</div>
-</section>
+</div></section>
 <section id="revisions-per-paper" class="slide level2">
 <h2>Revisions Per Paper</h2>
 <div class="column" style="width:65%;">
 <p><img data-src="images/hazard.png"></p>
-</div>
-<div class="column" style="width:30%;">
+</div><div class="column" style="width:30%;">
 <p><br></p>
 <ul>
 <li>80% of papers fail in first round.</li>
 <li>Hazard still 50% in second round.</li>
 <li>Difficult packages</li>
 </ul>
-</div>
-<!-- ---
+</div><!-- ---
 
 ## Processing Times Per Paper
 
@@ -466,6 +469,46 @@ Florian Oswald <a href="https://orcid.org/0000-0001-7737-2038" class="quarto-tit
 * Graph shows cumulative times.
 ::: -->
 </section>
+<section id="difficult-packages" class="slide level2">
+<h2>Difficult Packages</h2>
+<p>👉 Waiting for author replies:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb1-1"><a aria-hidden="true" tabindex="-1"></a> Row │ days_waiting  case_id                 round    ms        editor  </span>
+<span id="cb1-2"><a aria-hidden="true" tabindex="-1"></a>─────┼──────────────────────────────────────────────────────────────────</span>
+<span id="cb1-3"><a aria-hidden="true" tabindex="-1"></a>   <span class="fl">1</span> │ <span class="fl">0</span> days        Desmet<span class="op">-</span><span class="fl">20230792</span><span class="op">-</span>R2      <span class="fl">2</span>        <span class="fl">20230792</span>  SB</span>
+<span id="cb1-4"><a aria-hidden="true" tabindex="-1"></a>   <span class="fl">2</span> │ <span class="fl">1</span> day         Hergueux<span class="op">-</span><span class="fl">20221033</span><span class="op">-</span>R3    <span class="fl">3</span>        <span class="fl">20221033</span>  SH</span>
+<span id="cb1-5"><a aria-hidden="true" tabindex="-1"></a>   <span class="fl">3</span> │ <span class="fl">1</span> day         Mysliwski<span class="op">-</span><span class="fl">20201004</span><span class="op">-</span>R3   <span class="fl">3</span>        <span class="fl">20201004</span>  HB</span>
+<span id="cb1-6"><a aria-hidden="true" tabindex="-1"></a>   <span class="fl">4</span> │ <span class="fl">1</span> day         Nieto<span class="op">-</span><span class="fl">20200125</span><span class="op">-</span>R2       <span class="fl">2</span>        <span class="fl">20200125</span>  MM</span>
+<span id="cb1-7"><a aria-hidden="true" tabindex="-1"></a>   <span class="fl">5</span> │ <span class="fl">7</span> days        Bogart<span class="op">-</span><span class="fl">20231173</span><span class="op">-</span>R3      <span class="fl">3</span>        <span class="fl">20231173</span>  SB</span>
+<span id="cb1-8"><a aria-hidden="true" tabindex="-1"></a>   <span class="fl">6</span> │ <span class="fl">9</span> days        Tungodden<span class="op">-</span><span class="fl">20221320</span><span class="op">-</span>R2   <span class="fl">2</span>        <span class="fl">20221320</span>  SH</span>
+<span id="cb1-9"><a aria-hidden="true" tabindex="-1"></a>   <span class="fl">7</span> │ <span class="fl">14</span> days       Milner<span class="op">-</span><span class="fl">20221030</span><span class="op">-</span>R4      <span class="fl">4</span>        <span class="fl">20221030</span>  EK</span>
+<span id="cb1-10"><a aria-hidden="true" tabindex="-1"></a>   <span class="fl">8</span> │ <span class="fl">15</span> days       Weinstein<span class="op">-</span><span class="fl">20230047</span><span class="op">-</span>R2   <span class="fl">2</span>        <span class="fl">20230047</span>  BP</span>
+<span id="cb1-11"><a aria-hidden="true" tabindex="-1"></a>   <span class="fl">9</span> │ <span class="fl">19</span> days       Auffhammer<span class="op">-</span><span class="fl">20220399</span><span class="op">-</span>R5  <span class="fl">5</span>        <span class="fl">20220399</span>  SH</span>
+<span id="cb1-12"><a aria-hidden="true" tabindex="-1"></a>  <span class="fl">10</span> │ <span class="fl">20</span> days       Panza<span class="op">-</span><span class="fl">20230892</span><span class="op">-</span>R5       <span class="fl">5</span>        <span class="fl">20230892</span>  SB</span>
+<span id="cb1-13"><a aria-hidden="true" tabindex="-1"></a>  <span class="fl">11</span> │ <span class="fl">27</span> days       Jia<span class="op">-</span><span class="fl">20221220</span><span class="op">-</span>R2         <span class="fl">2</span>        <span class="fl">20221220</span>  MM</span>
+<span id="cb1-14"><a aria-hidden="true" tabindex="-1"></a>  <span class="fl">12</span> │ <span class="fl">29</span> days       Erixson<span class="op">-</span><span class="fl">20220836</span><span class="op">-</span>R3     <span class="fl">3</span>        <span class="fl">20220836</span>  SH</span>
+<span id="cb1-15"><a aria-hidden="true" tabindex="-1"></a>  <span class="fl">13</span> │ <span class="fl">37</span> days       Knittel<span class="op">-</span><span class="fl">20210889</span><span class="op">-</span>R5     <span class="fl">5</span>        <span class="fl">20210889</span>  SA</span>
+<span id="cb1-16"><a aria-hidden="true" tabindex="-1"></a>  <span class="fl">14</span> │ <span class="fl">77</span> days       Tabellini<span class="op">-</span><span class="fl">20230277</span><span class="op">-</span>R3   <span class="fl">3</span>        <span class="fl">20230277</span>  EZ</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="difficult-packages-1" class="slide level2">
+<h2>Difficult Packages</h2>
+<p>👉 Papers with 2 or more iterations</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb2-1"><a aria-hidden="true" tabindex="-1"></a> Row │ ms        round  firstname         lastname    editor </span>
+<span id="cb2-2"><a aria-hidden="true" tabindex="-1"></a>─────┼───────────────────────────────────────────────────────</span>
+<span id="cb2-3"><a aria-hidden="true" tabindex="-1"></a>   <span class="fl">1</span> │ <span class="fl">20201004</span>      <span class="fl">3</span>  Mateusz           Mysliwski   HB</span>
+<span id="cb2-4"><a aria-hidden="true" tabindex="-1"></a>   <span class="fl">2</span> │ <span class="fl">20201673</span>      <span class="fl">3</span>  Tim               Obermeier   BP</span>
+<span id="cb2-5"><a aria-hidden="true" tabindex="-1"></a>   <span class="fl">3</span> │ <span class="fl">20201684</span>      <span class="fl">5</span>  Olivier           Bargain     EZ</span>
+<span id="cb2-6"><a aria-hidden="true" tabindex="-1"></a>   <span class="fl">4</span> │ <span class="fl">20210374</span>      <span class="fl">4</span>  Tiago             Cavalcanti  FL</span>
+<span id="cb2-7"><a aria-hidden="true" tabindex="-1"></a>   <span class="fl">5</span> │ <span class="fl">20210889</span>      <span class="fl">5</span>  Christopher       Knittel     SA</span>
+<span id="cb2-8"><a aria-hidden="true" tabindex="-1"></a>   <span class="fl">6</span> │ <span class="fl">20220290</span>      <span class="fl">3</span>  Lionel            Page        SH</span>
+<span id="cb2-9"><a aria-hidden="true" tabindex="-1"></a>   <span class="fl">7</span> │ <span class="fl">20220399</span>      <span class="fl">5</span>  Maximilian        Auffhammer  SH</span>
+<span id="cb2-10"><a aria-hidden="true" tabindex="-1"></a>   <span class="fl">8</span> │ <span class="fl">20220836</span>      <span class="fl">3</span>  Oscar             Erixson     SH</span>
+<span id="cb2-11"><a aria-hidden="true" tabindex="-1"></a>   <span class="fl">9</span> │ <span class="fl">20221030</span>      <span class="fl">4</span>  Benjamin          Milner      EK</span>
+<span id="cb2-12"><a aria-hidden="true" tabindex="-1"></a>  <span class="fl">10</span> │ <span class="fl">20221033</span>      <span class="fl">3</span>  Jerome            Hergueux    SH</span>
+<span id="cb2-13"><a aria-hidden="true" tabindex="-1"></a>  <span class="fl">11</span> │ <span class="fl">20230277</span>      <span class="fl">3</span>  Marco             Tabellini   EZ</span>
+<span id="cb2-14"><a aria-hidden="true" tabindex="-1"></a>  <span class="fl">12</span> │ <span class="fl">20230481</span>      <span class="fl">4</span>  Pierre<span class="op">-</span>Guillaume  Meon        EZ</span>
+<span id="cb2-15"><a aria-hidden="true" tabindex="-1"></a>  <span class="fl">13</span> │ <span class="fl">20230892</span>      <span class="fl">5</span>  Laura             Panza       SB</span>
+<span id="cb2-16"><a aria-hidden="true" tabindex="-1"></a>  <span class="fl">14</span> │ <span class="fl">20231173</span>      <span class="fl">3</span>  Dan               Bogart      SB</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
 <section id="hours-spent-per-iteration" class="slide level2">
 <h2>Hours Spent per Iteration</h2>
 <ul>
@@ -474,17 +517,15 @@ Florian Oswald <a href="https://orcid.org/0000-0001-7737-2038" class="quarto-tit
 </ul>
 <div class="column" style="width:45%;">
 <p><img data-src="images/hours_iter.png"></p>
-</div>
-<div class="column" style="width:45%;">
+</div><div class="column" style="width:45%;">
 <p><img data-src="images/iters_paper.png"></p>
-</div>
-</section>
+</div></section>
 <section id="software" class="slide level2">
 <h2>Software</h2>
 <div style="font-size: 80%;">
 <div class="cell">
 <div class="cell-output-display">
-<table>
+<table class="caption-top">
 <thead>
 <tr class="header">
 <th style="text-align: left;">Software</th>
@@ -494,35 +535,35 @@ Florian Oswald <a href="https://orcid.org/0000-0001-7737-2038" class="quarto-tit
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">stata</td>
-<td style="text-align: right;">0.794</td>
+<td style="text-align: right;">0.788</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">matlab</td>
-<td style="text-align: right;">0.194</td>
+<td style="text-align: right;">0.190</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">R</td>
-<td style="text-align: right;">0.120</td>
+<td style="text-align: right;">0.117</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">ArcGIS_QGIS</td>
-<td style="text-align: right;">0.056</td>
+<td style="text-align: right;">0.055</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">python</td>
-<td style="text-align: right;">0.043</td>
+<td style="text-align: right;">0.046</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">mathematica</td>
-<td style="text-align: right;">0.031</td>
+<td style="text-align: right;">0.030</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">excel</td>
-<td style="text-align: right;">0.029</td>
+<td style="text-align: right;">0.028</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">fortran</td>
-<td style="text-align: right;">0.025</td>
+<td style="text-align: right;">0.024</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">SAS</td>
@@ -533,12 +574,8 @@ Florian Oswald <a href="https://orcid.org/0000-0001-7737-2038" class="quarto-tit
 <td style="text-align: right;">0.008</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">julia</td>
-<td style="text-align: right;">0.006</td>
-</tr>
-<tr class="even">
 <td style="text-align: left;">Other</td>
-<td style="text-align: right;">0.012</td>
+<td style="text-align: right;">0.018</td>
 </tr>
 </tbody>
 </table>
@@ -546,24 +583,18 @@ Florian Oswald <a href="https://orcid.org/0000-0001-7737-2038" class="quarto-tit
 </div>
 </div>
 </section>
-<section id="software-1" class="slide level2">
-<h2>Software</h2>
-
-<img data-src="images/software.png" class="r-stretch"></section>
 <section id="data-availability" class="slide level2">
 <h2>Data Availability</h2>
 <div class="column" style="width:65%;">
 <p><img data-src="./images/datastatements.png"></p>
-</div>
-<div class="column" style="width:30%;">
+</div><div class="column" style="width:30%;">
 <ul>
 <li>Confidential (👉 for us: <em>complicated</em>) Data is on the rise.</li>
 <li>Temporary Access is a good solution for us.</li>
 <li>Partial and temp. only are the exception.</li>
 <li>We changed policy slightly to encourage temp access.</li>
 </ul>
-</div>
-<p>:::</p>
+</div><p>:::</p>
 </section></section>
 <section id="end" class="title-slide slide level1 center">
 <h1>End</h1>
@@ -572,7 +603,7 @@ Florian Oswald <a href="https://orcid.org/0000-0001-7737-2038" class="quarto-tit
 <div class="quarto-auto-generated-content">
 <p><img src="images/RES-logo.png" class="slide-logo"></p>
 <div class="footer footer-default">
-<p>EJ Data Editor Report April 2024 <a href="https://floswald.github.io/">Florian Oswald</a></p>
+<p>EJ Data Editor Report October 2024 <a href="https://floswald.github.io/">Florian Oswald</a></p>
 </div>
 </div>
 </section>
@@ -856,18 +887,7 @@ Florian Oswald <a href="https://orcid.org/0000-0001-7737-2038" class="quarto-tit
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -899,7 +919,47 @@ Florian Oswald <a href="https://orcid.org/0000-0001-7737-2038" class="quarto-tit
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp("https:\/\/RES-Reproducibility\.github\.io\/reports\/");
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
       function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
@@ -936,7 +996,11 @@ Florian Oswald <a href="https://orcid.org/0000-0001-7737-2038" class="quarto-tit
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          return note.innerHTML;
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
         });
       }
       const findCites = (el) => {

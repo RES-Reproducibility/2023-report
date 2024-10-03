@@ -1,1 +1,1 @@
-Sitemap: https://RES-Reproducibility.github.io/2023-report/sitemap.xml
+Sitemap: https://RES-Reproducibility.github.io/reports/sitemap.xml
