@@ -27,77 +27,21 @@ title-slide-attributes:
 
 ## Agenda
 
-1. Process Optimization: EJ 🤝 EctJ
-2. Challenges: Computing Power (Where to Stop)
-3. Performance Report
+1.  Report on Downloads of our packages
+2.  Performance Report
+3.  Difficult Packages
+
+## Consumption of our Packages
+
+How often are our packages downloaded from `zenodo.org` vs how many citations on google scholar?
+
+![](./images/downloads.png)
 
 
-## 1. Process Optimization
-
-1. Together with Brooke and Jaap Abbring (ME of EctJ) we worked to harmonize data policies of EJ and EctJ.
-2. Same London based team handles both journals now, so streamlining processes is beneficial.
-3. We have almost identical data policies now.
-
-
-
-# Challenges  {background-color="#40666e"}
-
-## Challenges: Computing Power 
-
-### Nuvolos Subscription
-
-::: {.incremental}
-* We paid 2100 Euros for a [nuvolos](https://nuvolos.cloud/) subscription in June 2023 (term until June 2024).
-* 69120 CPU hours (single vCPU) in total. We've spent 48911 so far, i.e. 70%. 👍
-* We need a slightly larger subscription next year, particularly large file storage.
-* The service is excellent value for money.
-:::
-
-::: {.fragment}
-::: {.callout-note}
-# Where To Stop?
-
-Applications, particularly those relying on machine learning methods, require vast computing power. Does it make sense to attempt full reproducibility checks?
-:::
-:::
-
-
-
-## Challenges: Computing Power 
-
-### Nuvolos NCU Usage
-
-![_Nuvolos Compute Unit_ is a single vCPU with 4GM RAM](/images/nuvolos-NCU.png)
-
-
-## Challenges: Computing Power 
-
-### Nuvolos Usage
-
-![Number of app starts on Nuvolos](/images/nuvolos-numapps.png)
-
-
-## Challenges: Computing Power
-
-### Budgeting
-
-::: {.incremental}
-* Running Reproducibility Checks in-house (running them _anywhere_) costs money.
-* Labor costs and costs of computing power 📈.
-* (Costs of Licenses?)
-* I suggest thinking about a slightly larger budget to cover those costs.
-* I *strongly* suggest to renew the nuvolos subscription.
-:::
-
-
-
-
-# EJ Data Editor Report  {background-color="#40666e"}
-
+# EJ Data Editor Report {background-color="#40666e"}
 
 ::: footer
 :::
-
 
 ## Processing Times
 
@@ -115,12 +59,12 @@ x = read_list()
 ::: {.column width="25%"}
 <br>
 
-* Stayed below 15 day mark.
-* Right direction 📉.
-* Graph shows cumulative times.
+-   Stayed below 15 day mark.
+-   Right direction 📉.
+-   Graph shows cumulative times.
 :::
 
----
+------------------------------------------------------------------------
 
 ## Revisions Per Paper
 
@@ -131,11 +75,12 @@ x = read_list()
 ::: {.column width="30%"}
 <br>
 
-* 80% of papers fail in first round.
-* Hazard still 50% in second round.
-* Difficult packages
+-   80% of papers fail in first round.
+-   Hazard still 50% in second round.
+-   Difficult packages
 :::
 
+```{=html}
 <!-- ---
 
 ## Processing Times Per Paper
@@ -151,27 +96,72 @@ x = read_list()
 * Resubmission times increasing.
 * Graph shows cumulative times.
 ::: -->
+```
 
 ---
+
+## Difficult Packages
+
+
+
+👉 Waiting for author replies:
+
+```julia
+ Row │ days_waiting  case_id                 round    ms        editor  
+─────┼──────────────────────────────────────────────────────────────────
+   1 │ 0 days        Desmet-20230792-R2      2        20230792  SB
+   2 │ 1 day         Hergueux-20221033-R3    3        20221033  SH
+   3 │ 1 day         Mysliwski-20201004-R3   3        20201004  HB
+   4 │ 1 day         Nieto-20200125-R2       2        20200125  MM
+   5 │ 7 days        Bogart-20231173-R3      3        20231173  SB
+   6 │ 9 days        Tungodden-20221320-R2   2        20221320  SH
+   7 │ 14 days       Milner-20221030-R4      4        20221030  EK
+   8 │ 15 days       Weinstein-20230047-R2   2        20230047  BP
+   9 │ 19 days       Auffhammer-20220399-R5  5        20220399  SH
+  10 │ 20 days       Panza-20230892-R5       5        20230892  SB
+  11 │ 27 days       Jia-20221220-R2         2        20221220  MM
+  12 │ 29 days       Erixson-20220836-R3     3        20220836  SH
+  13 │ 37 days       Knittel-20210889-R5     5        20210889  SA
+  14 │ 77 days       Tabellini-20230277-R3   3        20230277  EZ
+  ```
+
+## Difficult Packages
+
+👉 Papers with 2 or more iterations
+
+```julia
+ Row │ ms        round  firstname         lastname    editor 
+─────┼───────────────────────────────────────────────────────
+   1 │ 20201004      3  Mateusz           Mysliwski   HB
+   2 │ 20201673      3  Tim               Obermeier   BP
+   3 │ 20201684      5  Olivier           Bargain     EZ
+   4 │ 20210374      4  Tiago             Cavalcanti  FL
+   5 │ 20210889      5  Christopher       Knittel     SA
+   6 │ 20220290      3  Lionel            Page        SH
+   7 │ 20220399      5  Maximilian        Auffhammer  SH
+   8 │ 20220836      3  Oscar             Erixson     SH
+   9 │ 20221030      4  Benjamin          Milner      EK
+  10 │ 20221033      3  Jerome            Hergueux    SH
+  11 │ 20230277      3  Marco             Tabellini   EZ
+  12 │ 20230481      4  Pierre-Guillaume  Meon        EZ
+  13 │ 20230892      5  Laura             Panza       SB
+  14 │ 20231173      3  Dan               Bogart      SB
+  ```
 
 ## Hours Spent per Iteration
 
-* As before we pay replicators by the hour.
-* on average 1h per iteration, 2 iterations per paper 👉 2h per paper.
+-   As before we pay replicators by the hour.
+-   on average 1h per iteration, 2 iterations per paper 👉 2h per paper.
 
-::: {.column width=45%}
-
+::: {.column width="45%"}
 ![](images/hours_iter.png)
 :::
 
-::: {.column width=45%}
-
+::: {.column width="45%"}
 ![](images/iters_paper.png)
-
 :::
 
-
----
+------------------------------------------------------------------------
 
 ## Software
 
@@ -182,28 +172,19 @@ kableExtra::kable(RESr:::list_software( )$table)
 :::
 
 
----
+------------------------------------------------------------------------
 
-## Software
-
-![](images/software.png)
-
----
-
-## Data Availability 
-
+## Data Availability
 
 ::: {.column width="65%"}
-![](/images/datastatements.png)
-
+![](./images/datastatements.png)
 :::
 
-
 ::: {.column width="30%"}
-* Confidential (👉 for us: *complicated*) Data is on the rise.
-* Temporary Access is a good solution for us.
-* Partial and temp. only are the exception.
-* We changed policy slightly to encourage temp access.
+-   Confidential (👉 for us: *complicated*) Data is on the rise.
+-   Temporary Access is a good solution for us.
+-   Partial and temp. only are the exception.
+-   We changed policy slightly to encourage temp access.
 :::
 
 :::
@@ -211,4 +192,3 @@ kableExtra::kable(RESr:::list_software( )$table)
 # End
 
 Thanks for listening and: onwards! 💪🏽
-
