@@ -161,6 +161,18 @@ x = read_list()
 ![](images/iters_paper.png)
 :::
 
+
+## Detailed Operations
+
+Breakdown of hours worked and cost for EJ:
+
+
+```{r}
+
+
+kableExtra::kable(RESr:::billing_table_ej()[,1:5],digits = 1)
+```
+
 ------------------------------------------------------------------------
 
 ## Software
